@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "lms-training-course-catalog-client-side-solution",
+    "id": "29a00cc4-54b8-4a3e-a476-4ae000e655a1",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "lms-training-course-catalog description"
+      },
+      "longDescription": {
+        "default": "lms-training-course-catalog description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "lms-training-course-catalog Feature",
+        "description": "The feature that activates elements of the lms-training-course-catalog solution.",
+        "id": "d12cc214-f82c-43c0-b14d-9c2cebbd7bc0",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/lms-training-course-catalog.sppkg"
+  }
+}
