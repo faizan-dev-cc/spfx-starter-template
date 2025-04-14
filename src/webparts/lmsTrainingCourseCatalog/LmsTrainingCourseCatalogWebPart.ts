@@ -10,43 +10,35 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'LmsTrainingCourseCatalogWebPartStrings';
-import LmsTrainingCourseCatalog from './components/LmsTrainingCourseCatalog';
+import * as strings from 'ReplaceThisWpNameWebPartStrings';
+import ReplaceThisWpName from './components/ReplaceThisWpName';
 
-export interface ILmsTrainingCourseCatalogWebPartProps {
+export interface IReplaceThisWpNameWebPartProps {
   description: string;
-  heading1: string;
-  heading2: string;
   listName: string;
-  visibleSections: string;
-  showViewAllLinks: boolean;
-  // upcomingCoursesTimeWindow: string;
+  showDuration: boolean;
   ItemsToShow: string;
 }
 
-export default class LmsTrainingCourseCatalogWebPart extends BaseClientSideWebPart<ILmsTrainingCourseCatalogWebPartProps> {
+export default class ReplaceThisWpNameWebPart extends BaseClientSideWebPart<IReplaceThisWpNameWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
   public render(): void {
     const propPane = {
-      heading1: this.properties?.heading1 || "General Safety Courses",
-      heading2: this.properties?.heading2 || "Professional Development Courses",
-      listName: this.properties?.listName || "Courses",
-      visibleSections: this.properties?.visibleSections || "both",
-      // upcomingCoursesTimeWindow: +(this.properties?.upcomingCoursesTimeWindow || "7"),
-      ItemsToShow: this.properties?.ItemsToShow || "4",
-      showViewAllLinks: typeof this.properties?.showViewAllLinks == "boolean" ? this.properties?.showViewAllLinks : false,
+      listName: this.properties?.listName || "MyItems",
+      ItemsToShow: this.properties?.ItemsToShow || "all",
+      showDuration: typeof this.properties?.showDuration == "boolean" ? this.properties?.showDuration : true,
     }
     const element: React.ReactElement<any> = React.createElement(
-      LmsTrainingCourseCatalog,
+      ReplaceThisWpName,
       {
         propPane,
         spContext: this.context,
         isDarkTheme: this._isDarkTheme,
+        currentUser: this.context.pageContext.user,
         environmentMessage: this._environmentMessage,
-        userDisplayName: this.context.pageContext.user.displayName
       }
     );
 
@@ -60,7 +52,7 @@ export default class LmsTrainingCourseCatalogWebPart extends BaseClientSideWebPa
   }
 
   private _getEnvironmentMessage(): string {
-    if (!!this.context.sdks.microsoftTeams) { // running in Teams
+    if (!!this.context.sdks.microsoftTeams) {
       return this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentTeams : strings.AppTeamsTabEnvironment;
     }
 
@@ -98,47 +90,22 @@ export default class LmsTrainingCourseCatalogWebPart extends BaseClientSideWebPa
             {
               groupName: "Webpart Configuration",
               groupFields: [
-                PropertyPaneTextField('heading1', {
-                  label: 'Heading 1',
-                  value: 'General Safety Courses'
-                }),
-                PropertyPaneTextField('heading2', {
-                  label: 'Heading 2',
-                  value: 'Professional Development Courses'
-                }),
                 PropertyPaneTextField('listName', {
                   label: 'List Name',
-                  value: 'Courses'
+                  value: 'MyItems'
                 }),
-                // PropertyPaneTextField('upcomingCoursesTimeWindow', {
-                //   label: 'Upcoming Courses Time Window (days)',
-                //   value: '7'
-                // }),
                 PropertyPaneDropdown('ItemsToShow', {
                   label: 'Items to Show',
                   options: [
                     { key: 'all', text: 'All items' },
-                    ...Array.from({ length: 100 }, (_, i) => ({ key: i + 1, text: (i + 1).toString() }))
+                    ...Array.from({ length: 10 }, (_, i) => ({ key: i + 1, text: (i + 1).toString() }))
                   ]
                 }),
-                PropertyPaneDropdown('visibleSections', {
-                  label: 'Visible Sections',
-                  options: [
-                    { key: 'both', text: 'Both' },
-                    { key: 'sec1', text: 'First Section' },
-                    { key: 'sec2', text: 'Second Section' },
-                  ]
-                }),
-                PropertyPaneToggle('showViewAllLinks', {
+                PropertyPaneToggle('showDuration', {
                   label: 'Show "View all" links',
                   onText: 'On',
                   offText: 'Off'
                 }),
-                // PropertyPaneToggle('showAllCourses', {
-                //   label: 'Show All Courses',
-                //   onText: 'On',
-                //   offText: 'Off'
-                // })
               ]
             }
           ]

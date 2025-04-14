@@ -1,4 +1,4 @@
-declare interface ILmsTrainingCourseCatalogWebPartStrings {
+declare interface IReplaceThisWpNameWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
   DescriptionFieldLabel: string;
@@ -13,7 +13,7 @@ declare interface ILmsTrainingCourseCatalogWebPartStrings {
   UnknownEnvironment: string;
 }
 
-declare module 'LmsTrainingCourseCatalogWebPartStrings' {
-  const strings: ILmsTrainingCourseCatalogWebPartStrings;
+declare module 'ReplaceThisWpNameWebPartStrings' {
+  const strings: IReplaceThisWpNameWebPartStrings;
   export = strings;
 }

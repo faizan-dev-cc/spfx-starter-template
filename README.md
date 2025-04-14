@@ -1,4 +1,4 @@
-# lms-training-course-catalog
+# replace-this-wp-name
 
 ## Summary
 

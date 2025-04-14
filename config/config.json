@@ -2,17 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "lms-training-course-catalog-web-part": {
+    "replace-this-wp-name-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/lmsTrainingCourseCatalog/LmsTrainingCourseCatalogWebPart.js",
-          "manifest": "./src/webparts/lmsTrainingCourseCatalog/LmsTrainingCourseCatalogWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/replaceThisWpName/ReplaceThisWpNameWebPart.js",
+          "manifest": "./src/webparts/replaceThisWpName/ReplaceThisWpNameWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "LmsTrainingCourseCatalogWebPartStrings": "lib/webparts/lmsTrainingCourseCatalog/loc/{locale}.js"
+    "ReplaceThisWpNameWebPartStrings": "lib/webparts/replaceThisWpName/loc/{locale}.js"
   }
 }
