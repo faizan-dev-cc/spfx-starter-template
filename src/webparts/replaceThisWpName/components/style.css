@@ -1,0 +1,102 @@
+    /* ------------------------Necessary CSS START---------------------- */
+    #workbenchPageContent,
+    .CanvasComponent.LCS .CanvasZone {
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #replace-this-wp-name-main {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    #replace-this-wp-name-main a {
+        text-decoration: none;
+    }
+
+    /* ------------------------Necessary CSS END---------------------- */
+
+
+    #replace-this-wp-name-main .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    #replace-this-wp-name-main .title {
+        color: #334155;
+        font-size: 36px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    #replace-this-wp-name-main .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    #replace-this-wp-name-main .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+
+    #replace-this-wp-name-main .card:hover {
+        transform: translateY(-2px);
+    }
+
+    #replace-this-wp-name-main .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #replace-this-wp-name-main .card-content {
+        padding: 16px;
+    }
+
+    #replace-this-wp-name-main .card-title {
+        color: #113f6d;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0 0 8px 0;
+    }
+
+    #replace-this-wp-name-main .card-description {
+        color: #666;
+        font-size: 14px;
+        margin: 0 0 16px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #replace-this-wp-name-main .card-time {
+        color: #666;
+        font-size: 12px;
+        margin: 0 0 8px 0;
+    }
+
+    #replace-this-wp-name-main .card-number small {
+        color: #164e63;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 2px 6px;
+        border-radius: 1rem;
+        background-color: #0281c676;
+    }
+
+    #replace-this-wp-name-main .card-number {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #333;
+        font-size: 14px;
+        margin: 0;
+    }

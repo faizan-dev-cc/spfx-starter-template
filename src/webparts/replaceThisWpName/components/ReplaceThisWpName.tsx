@@ -15,10 +15,10 @@ export default function CourseCatalog({ spContext, propPane }: any) {
 
   return <main id="replace-this-wp-name-main">
     <div className="header">
-      <h1 className="title">My Items</h1>
+      <h1 className="title">Welcome To Your New Webpart!</h1>
     </div>
-    <div className="grid-container">
+    <section className="grid-container">
       {items.slice(0, itemsToSlice).map((item: any) => <ItemCard item={item} propPane={propPane} />)}
-    </div>
+    </section>
   </main>
 }

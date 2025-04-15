@@ -47,6 +47,8 @@ export default class ReplaceThisWpNameWebPart extends BaseClientSideWebPart<IRep
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
+    this.domElement.parentElement!.style.width = "100%";
+    this.domElement.parentElement!.style.maxWidth = "100%";
 
     return super.onInit();
   }
@@ -102,7 +104,8 @@ export default class ReplaceThisWpNameWebPart extends BaseClientSideWebPart<IRep
                   ]
                 }),
                 PropertyPaneToggle('showDuration', {
-                  label: 'Show "View all" links',
+                  label: 'Show Modules Durations',
+                  checked: true,
                   onText: 'On',
                   offText: 'Off'
                 }),
