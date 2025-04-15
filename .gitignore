@@ -8,7 +8,8 @@ node_modules
 
 # Build generated files
 dist
-lib
+# Only ignoring the top level lib
+/lib
 release
 solution
 temp
