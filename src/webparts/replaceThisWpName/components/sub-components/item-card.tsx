@@ -2,8 +2,8 @@ import * as React from 'react';
 import { CARD_LINK, DEFAULT_IMG } from '../lib/enums';
 import { formatDate } from '../lib/utils';
 
-export function ItemCard({ item, propPane }: any) {
-    
+export default function ItemCard({ item, propPane }: any) {
+
     return <div className="card" key={item.id}>
         <a href={CARD_LINK + item.id} target="_blank" rel="noopener noreferrer" data-interception="off">
             <img src={item.image || DEFAULT_IMG} alt={item.title} className="card-image" />
