@@ -39,6 +39,10 @@ export default class ReplaceThisWpNameWebPart extends BaseClientSideWebPart<IRep
         isDarkTheme: this._isDarkTheme,
         currentUser: this.context.pageContext.user,
         environmentMessage: this._environmentMessage,
+        web: {
+          absUrl: this.context.pageContext.web.absoluteUrl,
+          relUrl: this.context.pageContext.web.serverRelativeUrl,
+        }
       }
     );
 

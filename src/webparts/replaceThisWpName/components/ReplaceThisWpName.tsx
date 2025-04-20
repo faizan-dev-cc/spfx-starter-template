@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { setupSP, getItems } from './lib/service';
 import { ItemCard } from './sub-components/item-card';
-import "./style.css"
+import "./ReplaceThisWpName.scss"
 
 export default function CourseCatalog({ spContext, propPane }: any) {
   const [items, setItems] = useState([])

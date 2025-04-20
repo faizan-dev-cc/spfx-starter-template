@@ -10,7 +10,7 @@
     "build": "gulp bundle",
     "clean": "gulp clean",
     "test": "gulp test",
-    "serve": "fast-serve",
+    "dev": "fast-serve",
     "pkg": "node build-pkg.ts"
   },
   "dependencies": {
