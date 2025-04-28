@@ -1,6 +1,15 @@
 {
   "extends": "./node_modules/@microsoft/rush-stack-compiler-4.7/includes/tsconfig-web.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@nebula/*": [
+        "src/nebula/*"
+      ]
+    },
     "target": "ES6",
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
@@ -28,8 +37,9 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.js",
+    // "src/**/*.ts",
+    // "src/**/*.js",
+    // "src/**/*.scss",
     "src/**/*",
   ]
 }

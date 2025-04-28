@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { CARD_LINK, DEFAULT_IMG } from '../lib/enums';
-import { formatDate } from '../lib/utils';
+import { formatDate } from "@nebula/utils";
 
 export default function ItemCard({ item, propPane }: any) {
 

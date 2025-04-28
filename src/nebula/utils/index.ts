@@ -35,3 +35,9 @@ export const formatDate = (dateStr: string) => {
     });
     return formattedDate
 }
+
+export const sleep = (ms: number) => {
+    return new Promise((resolve, _) => {
+        setTimeout(resolve, ms)
+    })
+}

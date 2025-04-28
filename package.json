@@ -8,10 +8,11 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "gulp bundle",
-    "clean": "gulp clean",
+    "clean": "node ./scripts/clean.ts",
     "test": "gulp test",
     "dev": "fast-serve",
-    "pkg": "node build-pkg.ts"
+    "serve": "fast-serve",
+    "pkg": "node ./scripts/build-pkg.ts"
   },
   "dependencies": {
     "@fluentui/react": "^8.106.4",

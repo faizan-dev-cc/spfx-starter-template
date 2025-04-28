@@ -1,26 +1,30 @@
 import { useEffect, useState } from "react";
-import { sp } from "@pnp/sp/presets/all";
+import { logger, sleep } from "@nebula/utils";
+import { setupSP } from "@nebula/utils/setup-spfx";
+
 import { LIST_NAME, SAMPLE_DATA } from "./enums";
-import { logger } from "./utils";
 
 export default function useService(props: any) {
     const { propPane } = props;
     const [items, setItems]: any = useState([]);
+    const [loading, setLoading]: any = useState(false);
 
     const itemsToSlice = propPane.ItemsToShow == "all" ? 1000 : +propPane.ItemsToShow;
     const slicedItems = items.slice(0, itemsToSlice);
 
     useEffect(() => {
         // Initial Setup
-        setupSP()
+        setupSP(props)
 
         // All other actions
         getItems()
     }, [])
 
-    const setupSP = () => {
-        sp.setup({ spfxContext: props.spContext });
-        (window as any).replaceThisWpNameData = props
+    const startLoading = async () => {
+        setLoading(true)
+        await sleep(4000)
+        alert("Stopping the loading now!")
+        setLoading(false)
     }
 
     const getItems = async () => {
@@ -48,11 +52,14 @@ export default function useService(props: any) {
     const resetItems = () => setItems([])
 
     return {
+        loading,
+        itemsToSlice,
         items: slicedItems,
+
         setItems,
         getItems,
         resetItems,
-        itemsToSlice
+        startLoading
     }
 }
 

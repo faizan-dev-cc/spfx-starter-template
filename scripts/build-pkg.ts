@@ -21,7 +21,7 @@ const startSpinner = (text) => {
 
 const stopSpinner = () => {
     clearInterval(interval);
-    process.stdout.write('\r✔ Complete                 \n');
+    process.stdout.write('\r✅ Complete                 \n');
 };
 
 const runCommand = (command, label) => {
@@ -49,10 +49,8 @@ const runCommand = (command, label) => {
     });
 };
 
-async function runSteps() {
+async function runBuild() {
     try {
-        const solutionPath = path.resolve('./sharepoint/solution/');
-
         const dirPath = path.resolve('./sharepoint');
         if (fs.existsSync(dirPath)) {
             fs.rmSync(dirPath, { recursive: true, force: true });
@@ -63,6 +61,8 @@ async function runSteps() {
         console.log('\n🎉 All done! Package is ready.\n');
         console.log('\n📂 Opening in File Explorer');
 
+
+        const solutionPath = path.resolve('./sharepoint/solution/');
         if (process.platform === 'win32') {
             exec(`explorer "${solutionPath}"`);
         } else console.log("\n⚠️  Unsupported OS. Please open the folder manually.\n");
@@ -72,4 +72,4 @@ async function runSteps() {
     }
 }
 
-runSteps();
+runBuild();

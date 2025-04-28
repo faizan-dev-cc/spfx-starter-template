@@ -14,13 +14,13 @@ export const SAMPLE_DATA = [
     },
     {
       id: 2,
-      title: 'Music Festival 2023',
-      description: 'Experience live performances from top artists around the world.',
-      startDate: '2023-11-15',
-      endDate: '2023-11-18',
-      number: 1002,
-      duration: '4 days',
-      image: 'https://images.unsplash.com/photo-1600119692901-94e8b7d2eacd?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      title: 'Winter Sports Camp',
+      description: 'Professional training for winter sports enthusiasts.',
+      startDate: '2024-01-10',
+      endDate: '2024-01-17',
+      number: 1010,
+      duration: '1 week',
+      image: 'https://images.unsplash.com/photo-1533681717801-1bbd2ec8d269?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
       id: 3,
@@ -74,12 +74,12 @@ export const SAMPLE_DATA = [
     },
     {
       id: 10,
-      title: 'Winter Sports Camp',
-      description: 'Professional training for winter sports enthusiasts.',
-      startDate: '2024-01-10',
-      endDate: '2024-01-17',
-      number: 1010,
-      duration: '1 week',
-      image: 'https://images.unsplash.com/photo-1533681717801-1bbd2ec8d269?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      title: 'Music Festival 2023',
+      description: 'Experience live performances from top artists around the world.',
+      startDate: '2023-11-15',
+      endDate: '2023-11-18',
+      number: 1002,
+      duration: '4 days',
+      image: 'https://images.unsplash.com/photo-1600119692901-94e8b7d2eacd?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     }
   ];
